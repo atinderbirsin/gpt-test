@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useAdSlot } from "./useAdSlot";
-import useTransitionState from "./useTransitionState";
-import { ads } from "./constant";
-import useLoader from "./useLoader";
+import { useAdSlot } from "./hooks/useAdSlot";
+import useTransitionState from "./hooks/useTransitionState";
+import { ads } from "./hooks/constant";
+import useLoader from "./hooks/useLoader";
 import styles from "../styles/Ad.module.css";
 
 function Ad({ adId }) {
