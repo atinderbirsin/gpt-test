@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useAdSlot({ sizes, id, adSlot, isTransitioning }) {
+const useAdSlot = ({ sizes, id, adSlot, isTransitioning }) => {
   useEffect(() => {
     if (!isTransitioning && typeof window !== undefined) {
       const { googletag } = window;
@@ -55,4 +55,6 @@ export function useAdSlot({ sizes, id, adSlot, isTransitioning }) {
       });
     }
   }, [sizes, id, isTransitioning]);
-}
+};
+
+export default useAdSlot;

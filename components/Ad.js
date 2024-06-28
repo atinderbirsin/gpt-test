@@ -1,14 +1,14 @@
 import React from "react";
 
-import { useAdSlot } from "./hooks/useAdSlot";
 import useTransitionState from "./hooks/useTransitionState";
-import { ads } from "./hooks/constant";
 import useLoader from "./hooks/useLoader";
 import styles from "../styles/Ad.module.css";
+import useAdSlot from "./hooks/useAdSlot";
+import ADS from "./hooks/constant";
 
 function Ad({ adId }) {
   const { isTransitioning } = useTransitionState();
-  const ad = ads[adId];
+  const ad = ADS[adId];
 
   const { hasRendered, ref } = useLoader();
   useAdSlot({
